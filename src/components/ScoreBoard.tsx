@@ -1,9 +1,5 @@
 import React from "react";
-
-interface ScoreboardProps {
-  currentScore: number;
-  bestScore: number;
-}
+import ScoreboardProps from "../types/ScoreboardProps";
 
 const Scoreboard: React.FC<ScoreboardProps> = ({ currentScore, bestScore }) => {
   return (
