@@ -92,7 +92,7 @@ const App: React.FC = () => {
         {cards.map((card, index) => (
           <Card
             key={index}
-            image={loading ? "/src/assets/card-back.svg" : card.src}
+            image={loading ? "/assets/card-back.svg" : card.src}
             name={card.name}
             handleClick={handleCardClick}
             isDisabled={loading}
