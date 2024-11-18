@@ -78,6 +78,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
+      <h1>Chihuahua Mix</h1>
       <h1>Memory Card Game</h1>
       <div className="">
         <button
