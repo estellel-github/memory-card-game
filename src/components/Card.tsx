@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
     >
       {isDisabled ? (
         <img
-          src={"src/assets/card-back.svg"}
+          src={"/assets/card-back.svg"}
           alt="Card Back"
           className="card-back"
         />
