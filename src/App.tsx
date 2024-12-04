@@ -78,27 +78,34 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <h1>Chihuahua Mix</h1>
-      <h1>Memory Card Game</h1>
-      <div className="">
-        <button
-          onClick={handleChooseDifficulty}
-          className="choose-difficulty-btn"
-        >
-          Choose Difficulty
-        </button>
+      <div className="left-bar">
+        <h1>
+          Chihuahua Mix
+          <br />
+          Memory Card Game
+        </h1>
+        <div className="difficulty">
+          <button
+            onClick={handleChooseDifficulty}
+            className="choose-difficulty-btn"
+          >
+            Choose Difficulty
+          </button>
+        </div>
+        <Scoreboard currentScore={currentScore} bestScore={bestScore} />
       </div>
-      <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-      <div className="card-grid">
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            image={loading ? "/assets/card-back.svg" : card.src}
-            name={card.name}
-            handleClick={handleCardClick}
-            isDisabled={loading}
-          />
-        ))}
+      <div className="card-container">
+        <div className="card-grid">
+          {cards.map((card, index) => (
+            <Card
+              key={index}
+              image={loading ? "/assets/card-back.svg" : card.src}
+              name={card.name}
+              handleClick={handleCardClick}
+              isDisabled={loading}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
