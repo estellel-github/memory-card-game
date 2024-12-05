@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useGameContext } from "./context/GameContext";
 import ModeSelection from "./components/ModeSelection";
 import Card from "./components/Card";
@@ -6,7 +6,7 @@ import Scoreboard from "./components/ScoreBoard";
 import fetchImages from "./services/fetchImages";
 import Image from "./types/Image";
 
-const App: React.FC = () => {
+const App = () => {
   const { state, dispatch } = useGameContext();
   const { cards, selectedCards, currentScore, bestScore, mode, loading } =
     state;
@@ -70,6 +70,8 @@ const App: React.FC = () => {
 
   const handleChooseDifficulty = () => {
     dispatch({ type: "SET_MODE", payload: null });
+    dispatch({ type: "SET_CURRENT_SCORE", payload: 0 });
+    dispatch({ type: "RESET_SELECTED_CARDS" });
   };
 
   if (!mode) {
