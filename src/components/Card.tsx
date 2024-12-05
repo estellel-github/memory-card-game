@@ -1,11 +1,6 @@
 import CardProps from "../types/Card";
 
-const Card: React.FC<CardProps> = ({
-  image,
-  name,
-  handleClick,
-  isDisabled,
-}) => {
+const Card = ({ image, name, handleClick, isDisabled }: CardProps) => {
   const handleCardClick = () => {
     if (!isDisabled) {
       handleClick(image);
