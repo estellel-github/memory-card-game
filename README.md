@@ -4,7 +4,7 @@ A memory card game featuring adorable Chihuahua mix breeds.
 Built with React and TypeScript as a learning project to practice state management and component structuring.
 This project is part of The Odin Project curriculum.
 
-![alt text](image.png)
+![Screenshot for Memory Card Game App](image.png)
 
 ### 🔗 Live Demo
 
@@ -51,6 +51,8 @@ This project was created as a learning exercise and provided hands-on experience
 
 ## How to Run Locally
 
+Make sure you have pnpm installed.
+
 1. Clone the repository:
    ```bash
    git clone <repository_url>
@@ -58,12 +60,12 @@ This project was created as a learning exercise and provided hands-on experience
    ```
 2. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 3. Start the development server:
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 4. Open the page in your browser.
